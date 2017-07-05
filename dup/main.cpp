@@ -236,7 +236,7 @@ int main(int argc, char *argv[]) {
 				exit(-1);
 			}
 			for (;;) {
-				int nfds = epoll_wait(epollfd, events, max_events, 60 * 1000);
+				int nfds = epoll_wait(epollfd, events, max_events, 180 * 1000);
 				if (nfds <= 0) {
 					printf("epoll_wait return %d\n", nfds);
 					exit(-1);
